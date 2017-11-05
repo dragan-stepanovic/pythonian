@@ -21,10 +21,10 @@ class AcceptanceTests(unittest.TestCase):
             raise ValueError('repo folder does not exist')
 
     def get_result(self):
-        if not os.path.isdir(r'C:\projects\pythonian\report'):
+        if not os.path.isdir(r'C:\projects\pythonian\result'):
             raise ValueError('results folder does not exist')
 
-        for dirpath, _, files in os.walk(r'C:\projects\pythonian\report'):
+        for dirpath, _, files in os.walk(r'C:\projects\pythonian\result'):
             if files:
                 print(dirpath, 'has files')
                 return True
