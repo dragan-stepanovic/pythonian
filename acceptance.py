@@ -23,9 +23,8 @@ class AcceptanceTests(unittest.TestCase):
         if not os.path.isdir(r'C:\projects\pythonian\result'):
             raise ValueError('results folder does not exist')
 
-        for dirpath, _, files in os.walk(r'C:\projects\pythonian\result'):
+        for _, _, files in os.walk(r'C:\projects\pythonian\result'):
             if files:
-                print(dirpath, 'has files')
                 return True
             else:
                 return False
