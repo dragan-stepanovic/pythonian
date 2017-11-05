@@ -4,12 +4,11 @@ import os
 
 class AcceptanceTests(unittest.TestCase):
     def test_reports_success_on_build_success(self):
-        self.setup_repo()
+        self.pull_code()
         self.invoke_build()
-        result = self.get_result()
-        self.assertTrue(result)
+        self.assertTrue(self.get_result())
 
-    def setup_repo(self):
+    def pull_code(self):
         self.assert_local_repo_exits()
 
     def invoke_build(self):
