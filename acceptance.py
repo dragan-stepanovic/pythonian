@@ -31,11 +31,19 @@ class AcceptanceTests(unittest.TestCase):
 
 class CiServer:
     def run_build(self):
-        #repo folder must exist; cloned code doesn't
+        # repo folder must exist; cloned code doesn't
         if not os.path.isdir(r'C:\projects\pythonian\repo'):
             raise ValueError('repo folder does not exist')
 
-        
+        result = self.run_msbuild()
+        self.save(result)
+
+    def run_msbuild(self):
+        pass
+
+    def save(self, result):
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()
